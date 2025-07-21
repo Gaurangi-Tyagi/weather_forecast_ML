@@ -6,14 +6,12 @@ import joblib
 import numpy as np
 import pandas as pd
 from flask import Flask, jsonify, render_template, request
-from flask_cors import CORS
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODELS_DIR = os.path.join(BASE_DIR,  "models")
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
-
-CORS(app)
 
 # Load models and encoders
 
